@@ -43,7 +43,7 @@ At TrueWallet, we are unwavering in our commitment to enhancing your CryptoWalle
 
 ## Components
 The project has 5 main components:
-* Smart contracts
+* [Smart Account](/category/smart-account)
 * [SDK](/category/sdk)
 * Blockchain
 * Bundler

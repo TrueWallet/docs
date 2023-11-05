@@ -56,7 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo_truewallet.png',
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
@@ -117,11 +117,11 @@ const config = {
             items: [
               {
                 label: 'Website',
-                to: 'https://true-wallet.io',
+                href: 'https://true-wallet.io',
               },
               {
                 label: 'Dashboard',
-                to: 'https://dashboard.true-wallet.io',
+                href: 'https://dashboard.true-wallet.io',
               },
               {
                 label: 'GitHub',
