@@ -94,8 +94,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'SDK',
+                to: '/category/sdk',
               },
             ],
           },
@@ -103,16 +103,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/TrueWallet4337',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/truewallet4337',
               },
             ],
           },
@@ -120,17 +116,21 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Website',
+                to: 'https://true-wallet.io',
+              },
+              {
+                label: 'Dashboard',
+                to: 'https://dashboard.true-wallet.io',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/TrueWallet',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} TruWallet. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} TrueWallet. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
