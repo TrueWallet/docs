@@ -76,6 +76,11 @@ const config = {
             label: 'Docs',
           },
           {
+            href: 'https://dashboard.true-wallet.io',
+            label: 'Dashboard',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/TrueWallet/docs',
             label: 'GitHub',
             position: 'right',
