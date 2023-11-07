@@ -36,7 +36,7 @@ At TrueWallet, we are unwavering in our commitment to enhancing your CryptoWalle
 ### Other
 * Transaction fee in ERC20 (coming soon)
 * Free (sponsored) transactions (coming soon)
-* Batch transactions
+* Batch transactions (coming soon)
 * Webhooks (coming soon)
 * Custom UI (coming soon)
 * No-code integration (coming soon)
@@ -46,13 +46,13 @@ The project has 5 main components:
 * [Smart Account](/category/smart-account)
 * [SDK](/category/sdk)
 * Blockchain
-* Bundler
+* [Bundler](/category/bundler) & Paymaster
 * API
 
 All components are independent and can be used separately.
 
 The project source code can be found here:
-* [Smart contracts](https://github.com/TrueWallet/contracts)
+* [Smart Account](https://github.com/TrueWallet/contracts)
 * [Javascript SDK](https://github.com/TrueWallet/js-sdk)
 
 ## Decentralization

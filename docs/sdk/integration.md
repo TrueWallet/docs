@@ -12,12 +12,12 @@ Install the required packages for initializing the TrueWallet SDK.
 
 <Tabs groupId="installation">
   <TabItem value="npm" label="npm">
-    ```bash
+    ```shell
     npm install ...
     ```
   </TabItem>
   <TabItem value="yarn" label="yarn">
-    ```bash
+    ```shell
     yarn add ...
     ```
   </TabItem>
