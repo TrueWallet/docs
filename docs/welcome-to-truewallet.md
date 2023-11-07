@@ -45,7 +45,7 @@ At TrueWallet, we are unwavering in our commitment to enhancing your CryptoWalle
 The project has 5 main components:
 * [Smart Account](/category/smart-account)
 * [SDK](/category/sdk)
-* Blockchain
+* [Blockchain](/category/blockchain)
 * [Bundler](/category/bundler) & Paymaster
 * API
 
