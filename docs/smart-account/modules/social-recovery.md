@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 # Social Recovery
 _Contract module that allows a group of guardians to collectively recover a wallet. This is intended for scenarios where the wallet owner is unable to access their wallet. The module adheres to the ISocialRecoveryModule interface and extends BaseModule for shared functionality._
