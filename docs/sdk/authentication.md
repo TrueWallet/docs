@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 # Authentication
 There are a couple available authentication methods that could be used during wallet initialization.
@@ -9,7 +9,7 @@ There are a couple available authentication methods that could be used during wa
   import {init} from 'true-wallet-sdk';
 
   /** Initialisation with existing private key */
-  const trueWallet = init({
+  const trueWallet = await init({
     signer: {
       type: 'privateKey',
       data: ['{{YOUR_PRIVATE_KEY}}']
@@ -25,7 +25,7 @@ Works with [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible wallet
   import {init} from 'true-wallet-sdk';
 
   /** Initialisation with Metamask */
-  const trueWallet = init({
+  const trueWallet = await init({
     signer: {
       type: 'injected',
       data: [window.ethereum]
@@ -45,7 +45,7 @@ Often, users generate keys from single words, obvious combinations like 12341234
   import {init} from 'true-wallet-sdk';
 
   /** Initialisation with salt */
-  const trueWallet = init({
+  const trueWallet = await init({
     signer: {
       type: 'salt',
       data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']

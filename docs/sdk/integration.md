@@ -34,7 +34,7 @@ To check all available methods, please refer to the [authentication](/sdk/authen
   import {init} from 'true-wallet-sdk';
 
   /** Initialisation with salt */
-  const trueWallet = init({
+  const trueWallet = await init({
     signer: {
       type: 'salt',
       data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']
