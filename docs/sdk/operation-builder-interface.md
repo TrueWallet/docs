@@ -21,7 +21,7 @@ params:
 * **initCode**: string - init code (used to deploy wallet contract, use '0x' if deployed)
 * **nonce**: string - wallet nonce
 
-returns \{Promise\<[UserOperationData](#useroperationdata)\>\}
+returns \{Promise\<[UserOperationData](/sdk/data-interfaces#useroperationdata)\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -34,18 +34,3 @@ returns \{Promise\<[UserOperationData](#useroperationdata)\>\}
     nonce: '12345'
   });
 ```
-
-## Data interfaces
-
-### UserOperationData
-* **sender**: string - sender address
-* **nonce**: bigint | string - wallet nonce
-* **initCode**: string - init code (used to deploy wallet contract, use '0x' if deployed)
-* **callData**: string - transaction call data
-* **callGasLimit**: number | string - gas limit for the transaction
-* **verificationGasLimit**: number | string - gas limit for the verification
-* **preVerificationGas**: number | string - gas limit for the pre-verification
-* **maxFeePerGas**: number | string - max fee per gas
-* **maxPriorityFeePerGas**: number | string - max priority fee per gas
-* **paymasterAndData**: string - paymaster address
-* **signature**: string - signature

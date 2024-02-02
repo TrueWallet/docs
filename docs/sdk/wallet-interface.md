@@ -33,7 +33,7 @@ Instance of [Bundler](/sdk/bundler-interface) client.
 ### getBalance
 method to get balance of the wallet in ether unit format
 
-returns \{string\}
+returns \{Promise\<string\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -51,7 +51,7 @@ params:
 |--------------|--------|-|-----------------------------------|
 | tokenAddress | string | True  | Address of the ERC20 token        |
 
-returns \{string\}
+returns \{Promise\<string\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -64,7 +64,7 @@ returns \{string\}
 ### getNonce
 method to get nonce of the wallet
 
-returns \{bigInt\}
+returns \{Promise\<bigInt\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -87,7 +87,7 @@ params:
 * **to** - (string) Recipient address
 * **amount** - (string | number) Amount to send in ether unit format
 
-returns \{[UserOperationResponse](#useroperationresponse)\}
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -112,7 +112,7 @@ params:
 * **amount** - (string | number) Amount to send in ether unit format
 * **tokenAddress** - (string) Address of the ERC20 token
 
-returns \{[UserOperationResponse](#useroperationresponse)\}
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -138,7 +138,7 @@ params:
 * **method**: string - Method name
 * **args**: unknown[] - Arguments for the method
 
-returns \{unknown\}
+returns \{Promise\<unknown\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -172,7 +172,7 @@ params:
 * **args**: unknown[] - Arguments for the method
 * **payableAmount?**: number | string - (optional) Amount of native tokens to send with the transaction
 
-returns \{[UserOperationResponse](#useroperationresponse)\}
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
   import {init} from 'true-wallet-sdk';
@@ -188,43 +188,3 @@ returns \{[UserOperationResponse](#useroperationresponse)\}
   });
   await operationResponse.wait(); // wait for the transaction to be mined
 ```
-
-## Data interfaces
-### UserOperationResponse
-* **userOperationHash**: string - User operation hash (unique identifier from the Bundler)
-* **wait(maxRetry: number = 0)**: Promise\<[UserOperationReceipt](#useroperationreceipt)\> - Helper for waiting while the transaction will be mined. When maxRetry is 0, the promise will be fulfilled/rejected when the transaction is mined in a blockchain.
-
-### UserOperationReceipt
-* **actualGasCost**: string - Hex string of the actual gas cost
-* **actualGasUsed**: string - Hex string of the actual gas used
-* **from**: string - Sender address
-* **logs**: [UserOperationLog](#useroperationlog)[] - Array of logs
-* **nonce**: string - Hex string of the nonce
-* **paymaster**: string - Paymaster address
-* **receipt**: [UserOperationTransactionReceipt](#useroperationtransactionreceipt) - Transaction receipt
-* **sender**: string - Sender address
-* **success**: boolean - Operation success status
-* **userOpHash**: string - User operation hash
-
-### UserOperationTransactionReceipt
-* **blockHash**: string - Hex string of the block hash
-* **blockNumber**: string - Hex string of the block number
-* **cumulativeGasUsed**: string - Hex string of the cumulative gas used
-* **effectiveGasPrice**: string - Hex string of the effective gas price
-* **from**: string - Sender address
-* **gasUsed**: string - Hex string of the gas used
-* **logs**: [UserOperationLog](#useroperationlog)[] - Array of logs
-* **logsBloom**: string - Hex string of the logs bloom
-* **transactionHash**: string - The transaction hash
-* **transactionIndex**: string - Hex string of the transaction index
-
-### UserOperationLog
-* **address**: string;
-* **blockHash**: string - The block hash
-* **blockNumber**: string - Hex string of the block number
-* **data**: string - Call data
-* **logIndex**: string - Hex string of the log index
-* **removed**: boolean - Log removed status
-* **topics**: string[] - Array of topics
-* **transactionHash**: string - The transaction hash
-* **transactionIndex**: string - Hex string of the transaction index
