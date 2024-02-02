@@ -24,7 +24,22 @@ Install the required packages for initializing the TrueWallet SDK.
 </Tabs>
 
 ## Integration Example
+Before initialisation your first wallet, create endpoint url in the [dashboard](https://dashboard.true-wallet.io).
 
+To check all available methods, please refer to the [authentication](/sdk/authentication).
+
+
+### Initialisation with salt:
 ```javascript
+  import {init} from 'true-wallet-sdk';
 
+  /** Initialisation with salt */
+  const trueWallet = init({
+    signer: {
+      type: 'salt',
+      data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']
+    },
+    rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+    bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+  });
 ```

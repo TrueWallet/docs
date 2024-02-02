@@ -5,5 +5,52 @@ sidebar_position: 3
 There are a couple available authentication methods that could be used during wallet initialization.
 
 ## Private Key
+```javascript
+  import {init} from 'true-wallet-sdk';
+
+  /** Initialisation with existing private key */
+  const trueWallet = init({
+    signer: {
+      type: 'privateKey',
+      data: ['{{YOUR_PRIVATE_KEY}}']
+    },
+    rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+    bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+  });
+```
 
 ## Metamask
+Works with [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible wallets like Metamask. Using this method, we don't handle selected wallet address and network. Metamask will be used only to sign messages for the user operations. 
+```javascript
+  import {init} from 'true-wallet-sdk';
+
+  /** Initialisation with Metamask */
+  const trueWallet = init({
+    signer: {
+      type: 'injected',
+      data: [window.ethereum]
+    },
+    rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+    bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+  });
+```
+
+## Salt
+This method is used to generate a private key from a unique string. Pay attention to the fact that the same string will always generate the same private key.
+Read information about **Weak Brainwallet** before using this method.
+
+*Brainwallet is a method of creating a private key based on a user-generated phrase instead of a random number. It is easy to remember, hence literally “kept in the head.”
+Often, users generate keys from single words, obvious combinations like 12341234, phone numbers, or quotes from movies. Hackers exploit human predictability: they create keys from popular or leaked passwords, and then withdraw cryptocurrencies from the corresponding wallets. Thus, since 2009, perpetrators have hacked more than 19,000 Bitcoin wallets and stolen at least 4000 BTC.*
+```javascript
+  import {init} from 'true-wallet-sdk';
+
+  /** Initialisation with salt */
+  const trueWallet = init({
+    signer: {
+      type: 'salt',
+      data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']
+    },
+    rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+    bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+  });
+```
