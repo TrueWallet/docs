@@ -5,7 +5,7 @@ sidebar_position: 3
 
 ## Properties
 ### address
-return wallet address
+returns wallet address
 
 ### ready
 indicates whether the wallet is deployed to blockchain
