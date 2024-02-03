@@ -61,3 +61,6 @@ sidebar_position: 6
 * **preVerificationGas**: number - Gas limit for the pre-verification
 * **verificationGas**: number - Gas limit for the verification
 * **verificationGasLimit?**: number - Gas limit for the verification
+
+### TrueWalletModules
+type TrueWalletModules = 'SecurityControlModule' | 'SocialRecoveryModule';

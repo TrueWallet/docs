@@ -188,3 +188,125 @@ returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationres
   });
   await operationResponse.wait(); // wait for the transaction to be mined
 ```
+
+### getInstalledModules
+method to get installed modules of the wallet
+
+returns \{Promise\<string[]\>\}
+
+```javascript
+  import {init} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const modules = await wallet.getInstalledModules();
+  console.log(modules); // ['0x...', '0x...']
+```
+
+### getModuleAddress
+method to get module smart contract address of the wallet
+
+params:
+
+| Parameter | Type                  | Required | Value                            |
+|-----------|-----------------------|----------|----------------------------------|
+| module    | [TrueWalletModules](/sdk/data-interfaces#truewalletmodules) | True     | Module name                      |
+
+returns \{Promise\<string\>\}
+
+```javascript
+  import {init} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const address = await wallet.getModuleAddress('SocialRecoveryModule');
+  console.log(address); // '0x...'
+```
+
+### installModule
+method to install the module to the wallet
+
+params:
+
+| Parameter | Type                  | Required | Value                            |
+|-----------|-----------------------|----------|----------------------------------|
+| module    | [TrueWalletModules](/sdk/data-interfaces#truewalletmodules) | True     | Module name                      |
+| moduleData | unknown               | True     | Mandatory data to install module |
+
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
+
+```javascript
+  import {init} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const moduleData = {
+    guardians: [
+      '0x...',
+      '0x...',
+      '0x...'
+    ],
+    threshold: 2,
+  };
+  const operationResponse = await wallet.installModule('SocialRecoveryModule', moduleData);
+  await operationResponse.wait(); // wait for the transaction to be mined
+```
+
+### removeModule
+method to remove the module from the wallet
+
+params:
+
+| Parameter | Type                  | Required | Value        |
+|-----------|-----------------------|----------|--------------|
+| module    | [TrueWalletModules](/sdk/data-interfaces#truewalletmodules) | True     | Module name  |
+
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
+
+```javascript
+  import {init} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const operationResponse = await wallet.removeModule('SocialRecoveryModule');
+  await operationResponse.wait(); // wait for the transaction to be mined
+```
+
+### isWalletOwner
+method to check if the given address is the owner of the wallet
+
+params:
+
+| Parameter | Type   | Required | Value        |
+|-----------|--------|----------|--------------|
+| address   | string | True     | Address to check |
+
+returns \{Promise\<boolean\>\}
+
+```javascript
+  import {init} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const isOwner = await wallet.isWalletOwner('0x...');
+  console.log(isOwner); // true
+```
+
+### execute
+low level method to execute the transaction on behalf of the wallet
+
+params:
+
+| Parameter | Type   | Required | Value                                                                   |
+|-----------|--------|----------|-------------------------------------------------------------------------|
+| payload   | string | True     | Transaction calldata                                                    |
+| target    | string | False    | Target address. Default value - wallet address                          |
+| value     | string | False    | Amount of native tokens to send with the transaction. Default value - 0 |
+| paymaster | string | False    | Address of the paymaster contract                                       |
+
+returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
+
+```javascript
+  import {init, encodeFunctionData} from 'true-wallet-sdk';
+  
+  const wallet = await init({...});
+  const abi = ['function approve(address spender, uint256 amount)'];
+  const payload = encodeFunctionData(abi, 'approve', ['0x...', 1000000]);
+  const operationResponse = await wallet.execute(payload);
+  await operationResponse.wait(); // wait for the transaction to be mined
+```
