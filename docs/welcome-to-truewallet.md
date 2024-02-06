@@ -4,6 +4,7 @@ slug: /
 title: TrueWallet - Enhancing Your CryptoWallet Experience with Account Abstraction
 description: Explore TrueWallet's innovative proposal for enhancing your crypto experience with Account Abstraction (ERC-4337). Discover seamless smart contract interactions, enhanced DeFi access, NFT integration, and robust security measures.
 keywords: [TrueWallet, CryptoWallet, Account Abstraction, ERC-4337, smart contracts, DeFi, NFT integration, security measures, decentralized applications, DApps, non-custodial wallet]
+sidebar_label: Welcome to TrueWallet
 ---
 
 # Welcome to TrueWallet

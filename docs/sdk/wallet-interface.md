@@ -3,6 +3,7 @@ sidebar_position: 3
 title: TrueWallet SDK Interfaces - Properties and Methods Explained
 description: Discover the comprehensive guide to TrueWallet SDK interfaces, detailing properties and methods for seamless integration into your applications. Explore the functionalities and capabilities offered by TrueWallet's SDK for enhanced wallet management.
 keywords: [TrueWallet SDK, wallet SDK interfaces, properties, methods, wallet management, integration guide]
+sidebar_label: Wallet Interface
 ---
 # Wallet Interface
 

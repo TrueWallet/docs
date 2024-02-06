@@ -3,6 +3,7 @@ sidebar_position: 6
 title: TrueWallet SDK Data Interfaces - Exploring Data Interfaces
 description: Dive into the TrueWallet SDK Data Interfaces, encompassing various interfaces for managing and accessing essential data within your applications. Explore the functionalities and capabilities offered by different data interfaces within the TrueWallet SDK.
 keywords: [TrueWallet SDK, Data interfaces, SDK interfaces, data management, application development, interface functionalities]
+sidebar_label: Data interfaces
 ---
 
 # Data interfaces

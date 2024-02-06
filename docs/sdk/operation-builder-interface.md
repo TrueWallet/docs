@@ -3,6 +3,7 @@ sidebar_position: 5
 title: TrueWallet SDK Operation Builder Interface - Available Methods
 description: Discover the available methods within the TrueWallet SDK Operation Builder Interface, designed to facilitate the creation and execution of various operations within your applications. Learn how to leverage the Operation Builder interface for seamless operation management.
 keywords: [TrueWallet SDK, Operation Builder interface, available methods, operation creation, operation execution, SDK functionalities]
+sidebar_label: Operation builder interface
 ---
 # Operation builder interface
 Operation builder is used to create user operation object;

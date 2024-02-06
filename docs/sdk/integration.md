@@ -3,6 +3,7 @@ sidebar_position: 1
 title: TrueWallet SDK Integration Guide - Installation & Authentication
 description: Learn how to integrate the TrueWallet SDK seamlessly into your projects. Follow step-by-step instructions for installation, authentication, and accessing available methods for enhanced functionality.
 keywords: [TrueWallet, SDK integration, TrueWallet dashboard, API Endpoint, installation guide, authentication methods, wallet initialization, endpoint URL]
+sidebar_label: Integration
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
