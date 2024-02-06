@@ -1,5 +1,8 @@
 ---
 sidebar_position: 4
+title: TrueWallet SDK Bundler Client Interface - Available Methods
+description: Explore the TrueWallet SDK Bundler Client Interface, revealing the available methods for efficient bundling and managing transactions. Learn how to leverage the Bundler client interface to streamline transaction processing in your applications.
+keywords: [TrueWallet SDK, Bundler client interface, available methods, transaction bundling, transaction management, SDK functionalities]
 ---
 # Bundler client interface
 You can check more information about the Bundler [here](/category/bundler).

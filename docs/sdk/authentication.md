@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+title: TrueWallet SDK Authentication Method - Private Key, Metamask, and Salt
+description: Explore the available authentication methods for integrating TrueWallet SDK into your applications. Learn about Private Key usage, Metamask integration, and generating private keys from unique strings (Salt) while considering security implications.
+keywords: [TrueWallet SDK, authentication methods, Private Key, Metamask, Salt, EIP-1193, Brainwallet, security implications]
 ---
 # Authentication
 There are a couple available authentication methods that could be used during wallet initialization.
@@ -20,7 +23,7 @@ There are a couple available authentication methods that could be used during wa
 ```
 
 ## Metamask
-Works with [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible wallets like Metamask. Using this method, we don't handle selected wallet address and network. Metamask will be used only to sign messages for the user operations. 
+Works with [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible wallets like Metamask. Using this method, we don't handle selected wallet address and network. Metamask will be used only to sign messages for user operations. 
 ```javascript
   import {init} from 'true-wallet-sdk';
 
