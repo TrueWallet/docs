@@ -52,6 +52,8 @@ const config = {
     ],
   ],
 
+  scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.true-wallet.io'}],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
