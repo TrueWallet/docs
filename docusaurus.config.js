@@ -142,6 +142,7 @@ const config = {
           appId: 'RDQ04QOJNT',
           apiKey: 'df669f02081b8da74c2b7e85960f94eb',
           indexName: 'docs',
+          contextualSearch: false,
       },
     }),
 };
