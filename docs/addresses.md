@@ -21,9 +21,9 @@ The TrueWallet Smart Account addresses are the same on all EVM networks.
 
 | Name             | Address                                        | Version |
 |------------------|------------------------------------------------|---------|
-| Implementation   | [0x692E153c10f0fB499e881b1cCA9CfbA39238289a](https://blockscan.com/address/0x692E153c10f0fB499e881b1cCA9CfbA39238289a) | 1.0.0   |
-| Factory          | [0xBEF8C6eaDa7b8209e2d61a873eb0Add95Ef8054C](https://blockscan.com/address/0xBEF8C6eaDa7b8209e2d61a873eb0Add95Ef8054C) | 1.0.0   |
-| Contract Manager | [0x034c8ec5FF5E5CfA0a0E894529DC565CE42A60c2](https://blockscan.com/address/0x034c8ec5FF5E5CfA0a0E894529DC565CE42A60c2) | 1.0.0   |
+| Implementation   | [0x69F93bec57dc6464C2135f65F76062d88e037cB8](https://blockscan.com/address/0x69F93bec57dc6464C2135f65F76062d88e037cB8) | 1.0.0   |
+| Factory          | [0x5137F38ACa8572638E031710A806944480540271](https://blockscan.com/address/0x5137F38ACa8572638E031710A806944480540271) | 1.0.0   |
+| Contract Manager | [0x1C04d3Fd1761b29F7b56D2202130750c1DcA4281](https://blockscan.com/address/0x1C04d3Fd1761b29F7b56D2202130750c1DcA4281) | 1.0.0   |
 
 ## TrueWallet Smart Account Modules
 
@@ -31,5 +31,5 @@ The TrueWallet Smart Account Modules addresses are the same on all EVM networks.
 
 | Name                   | Address                                        | Version |
 |------------------------|------------------------------------------------|---------|
-| Security Module        | [0xcEd0171FB5101ed77BB276144bd1F4902837a199](https://blockscan.com/address/0xcEd0171FB5101ed77BB276144bd1F4902837a199) | 1.0.0   |
-| Social Recovery Module | [0xC0D84bcc9001A35dD15a228edf5e1bcBafFfd30E](https://blockscan.com/address/0xC0D84bcc9001A35dD15a228edf5e1bcBafFfd30E) | 1.0.0   |
+| Security Module        | [0x559103Ecd6cA2a0b92c973a7783dd83B9d7980ee](https://blockscan.com/address/0x559103Ecd6cA2a0b92c973a7783dd83B9d7980ee) | 1.0.0   |
+| Social Recovery Module | [0x929BAF181bFE97F59ecc22c3EFd33c0D9334380F](https://blockscan.com/address/0x929BAF181bFE97F59ecc22c3EFd33c0D9334380F) | 1.0.0   |
