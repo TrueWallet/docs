@@ -589,6 +589,31 @@ Parameters
   </TabItem>
 </Tabs>
 
+## eth_maxPriorityFeePerGas
+Parameters: None
+
+<Tabs groupId="eth_maxPriorityFeePerGas">
+  <TabItem value="Request" label="Request">
+    ```shell
+    {
+      "jsonrpc": "2.0",
+      "method": "eth_maxPriorityFeePerGas",
+      "params": [],
+      "id": 1
+    }
+    ```
+  </TabItem>
+  <TabItem value="Response" label="Response">
+    ```shell
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": "0x55d4a80"
+    }
+    ```
+  </TabItem>
+</Tabs>
+
 ## eth_getLogs
 Parameters
 | Parameter | Required | Value |
