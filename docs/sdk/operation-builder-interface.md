@@ -28,13 +28,13 @@ params:
 returns \{Promise\<[UserOperationData](/sdk/data-interfaces#useroperationdata)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operation = wallet.operationBuilder.buildOperation({
-    sender: '0x1234567890123456789012345678901234567890',
-    callData: '0x....',
-    initCode: '0x',
-    nonce: '12345'
-  });
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operation = wallet.operationBuilder.buildOperation({
+  sender: '0x1234567890123456789012345678901234567890',
+  callData: '0x....',
+  initCode: '0x',
+  nonce: '12345'
+});
 ```

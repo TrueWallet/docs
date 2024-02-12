@@ -21,11 +21,11 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operation = await wallet.operationBuilder.buildOperation({...});
-  const response = await wallet.bundler.sendUserOperation(operation);
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operation = await wallet.operationBuilder.buildOperation({...});
+const response = await wallet.bundler.sendUserOperation(operation);
 ```
 
 ### estimateUserOperationGas
@@ -40,11 +40,11 @@ params:
 returns \{Promise\<[GasEstimation](/sdk/data-interfaces#gasestimation)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operation = await wallet.operationBuilder.buildOperation({...});
-  const gas = await wallet.bundler.estimateUserOperationGas(operation);
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operation = await wallet.operationBuilder.buildOperation({...});
+const gas = await wallet.bundler.estimateUserOperationGas(operation);
 ```
 
 ### getUserOperationByHash
@@ -59,10 +59,10 @@ params:
 returns \{Promise\<[UserOperationData](/sdk/data-interfaces#useroperationdata) | null\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operation = await wallet.bundler.getUserOperationByHash('0x...');
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operation = await wallet.bundler.getUserOperationByHash('0x...');
 ```
 
 
@@ -79,10 +79,10 @@ params:
 returns \{Promise\<[UserOperationReceipt](/sdk/data-interfaces#useroperationreceipt)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const receipt = await wallet.bundler.getUserOperationReceipt('0x...');
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const receipt = await wallet.bundler.getUserOperationReceipt('0x...');
 ```
 
 ### getSupportedEntryPoints
@@ -91,8 +91,8 @@ method to get supported entry points of the bundler
 returns \{Promise\<string[]\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const entryPoints = await wallet.bundler.getSupportedEntryPoints();
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const entryPoints = await wallet.bundler.getSupportedEntryPoints();
 ```

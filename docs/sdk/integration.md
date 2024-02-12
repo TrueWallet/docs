@@ -14,6 +14,8 @@ Before starting you need to create an account in the TrueWallet [dashboard](http
 ## Installation
 Install the required packages for initializing the TrueWallet SDK.
 
+*Tested with Angular, React, and Node.js v18 and higher*
+
 <Tabs groupId="installation">
   <TabItem value="npm" label="npm">
     ```shell
@@ -35,15 +37,16 @@ To check all available methods, please refer to the [authentication](/sdk/authen
 
 ### Initialisation with salt:
 ```javascript
-  import {init} from 'true-wallet-sdk';
+import {initTrueWallet} from '@truewallet/sdk';
 
-  /** Initialisation with salt */
-  const trueWallet = await init({
-    signer: {
-      type: 'salt',
-      data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']
-    },
-    rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
-    bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
-  });
+/** Initialisation with salt */
+const trueWallet = await initTrueWallet({
+  signer: {
+    type: 'salt',
+    data: ['{{YOUR_UNIQUE_STRING_FOR_PRIVATE_KEY_GENERATION}}']
+  },
+  bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+  // Optional, bundlerUrl is used when rpcProviderUrl is not provided
+  // rpcProviderUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+});
 ```

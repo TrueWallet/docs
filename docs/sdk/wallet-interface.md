@@ -24,13 +24,13 @@ Instance of [OperationBuilder](/sdk/operation-builder-interface). Used to prepar
 Instance of [Bundler](/sdk/bundler-interface) client.
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  
-  console.log(wallet.address); // '0x...'
-  console.log(wallet.ready); // true
-  wallet.rpcProvider.getBlockNumber().then(console.log); // 12345
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+
+console.log(wallet.address); // '0x...'
+console.log(wallet.ready); // true
+wallet.rpcProvider.getBlockNumber().then(console.log); // 12345
 ```
 
 ## Methods
@@ -40,10 +40,10 @@ method to get balance of the wallet in ether unit format
 returns \{Promise\<string\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const balance = await wallet.getBalance(); // 123.45
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const balance = await wallet.getBalance(); // 123.45
 ```
 
 ### getERC20Balance
@@ -58,11 +58,11 @@ params:
 returns \{Promise\<string\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-  const balance = await wallet.getERC20Balance(usdtAddress); // 123.45
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
+const balance = await wallet.getERC20Balance(usdtAddress); // 123.45
 ```
 
 ### getNonce
@@ -71,10 +71,10 @@ method to get nonce of the wallet
 returns \{Promise\<bigInt\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const nonce = await wallet.getNonce(); // 12345n
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const nonce = await wallet.getNonce(); // 12345n
 ```
 
 ### send
@@ -94,11 +94,11 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operationResponse = await wallet.send({to: '0x...', amount: 123.45});
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operationResponse = await wallet.send({to: '0x...', amount: 123.45});
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
 ### sendErc20
@@ -119,12 +119,12 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-  const operationResponse = await wallet.sendErc20({to: '0x...', amount: 123.45, tokenAddress: usdtAddress});
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
+const operationResponse = await wallet.sendErc20({to: '0x...', amount: 123.45, tokenAddress: usdtAddress});
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
 ### contractRead
@@ -145,18 +145,18 @@ params:
 returns \{Promise\<unknown\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-  const usdtAbi = ['function allowance(address owner, address spender) view returns (uint256)'];
-  const allowance = await wallet.readContract({
-    address: usdtAddress,
-    abi: usdtAbi,
-    method: 'allowance',
-    args: ['0x...', '0x...']
-  });
-  console.log(allowance); // 1000000000000000000
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
+const usdtAbi = ['function allowance(address owner, address spender) view returns (uint256)'];
+const allowance = await wallet.readContract({
+  address: usdtAddress,
+  abi: usdtAbi,
+  method: 'allowance',
+  args: ['0x...', '0x...']
+});
+console.log(allowance); // 1000000000000000000
 ```
 
 ### contractCall
@@ -179,18 +179,18 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-  const usdtAbi = ['function approve(address spender, uint256 amount)'];
-  const operationResponse = await wallet.contractCall({
-    address: usdtAddress,
-    abi: usdtAbi,
-    method: 'approve',
-    args: ['0x...', 1000000]
-  });
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
+const usdtAbi = ['function approve(address spender, uint256 amount)'];
+const operationResponse = await wallet.contractCall({
+  address: usdtAddress,
+  abi: usdtAbi,
+  method: 'approve',
+  args: ['0x...', 1000000]
+});
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
 ### getInstalledModules
@@ -199,11 +199,11 @@ method to get installed modules of the wallet
 returns \{Promise\<string[]\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const modules = await wallet.getInstalledModules();
-  console.log(modules); // ['0x...', '0x...']
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const modules = await wallet.getInstalledModules();
+console.log(modules); // ['0x...', '0x...']
 ```
 
 ### getModuleAddress
@@ -218,11 +218,11 @@ params:
 returns \{Promise\<string\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const address = await wallet.getModuleAddress('SocialRecoveryModule');
-  console.log(address); // '0x...'
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const address = await wallet.getModuleAddress('SocialRecoveryModule');
+console.log(address); // '0x...'
 ```
 
 ### installModule
@@ -238,19 +238,19 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const moduleData = {
-    guardians: [
-      '0x...',
-      '0x...',
-      '0x...'
-    ],
-    threshold: 2,
-  };
-  const operationResponse = await wallet.installModule('SocialRecoveryModule', moduleData);
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const moduleData = {
+  guardians: [
+    '0x...',
+    '0x...',
+    '0x...'
+  ],
+  threshold: 2,
+};
+const operationResponse = await wallet.installModule('SocialRecoveryModule', moduleData);
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
 ### removeModule
@@ -265,11 +265,11 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const operationResponse = await wallet.removeModule('SocialRecoveryModule');
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const operationResponse = await wallet.removeModule('SocialRecoveryModule');
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
 ### isWalletOwner
@@ -284,11 +284,11 @@ params:
 returns \{Promise\<boolean\>\}
 
 ```javascript
-  import {init} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const isOwner = await wallet.isWalletOwner('0x...');
-  console.log(isOwner); // true
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const isOwner = await wallet.isWalletOwner('0x...');
+console.log(isOwner); // true
 ```
 
 ### execute
@@ -306,11 +306,11 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-  import {init, encodeFunctionData} from 'true-wallet-sdk';
-  
-  const wallet = await init({...});
-  const abi = ['function approve(address spender, uint256 amount)'];
-  const payload = encodeFunctionData(abi, 'approve', ['0x...', 1000000]);
-  const operationResponse = await wallet.execute(payload);
-  await operationResponse.wait(); // wait for the transaction to be mined
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const abi = ['function approve(address spender, uint256 amount)'];
+const payload = encodeFunctionData(abi, 'approve', ['0x...', 1000000]);
+const operationResponse = await wallet.execute(payload);
+await operationResponse.wait(); // wait for the transaction to be mined
 ```
