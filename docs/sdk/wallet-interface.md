@@ -306,11 +306,12 @@ params:
 returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
 
 ```javascript
-import {initTrueWallet} from '@truewallet/sdk';
+import {initTrueWallet, encodeFunctionData} from '@truewallet/sdk';
 
 const wallet = await initTrueWallet({...});
+const contractAddress = '0x....';
 const abi = ['function approve(address spender, uint256 amount)'];
 const payload = encodeFunctionData(abi, 'approve', ['0x...', 1000000]);
-const operationResponse = await wallet.execute(payload);
+const operationResponse = await wallet.execute(payload, contractAddress);
 await operationResponse.wait(); // wait for the transaction to be mined
 ```
