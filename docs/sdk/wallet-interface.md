@@ -33,6 +33,14 @@ console.log(wallet.ready); // true
 wallet.rpcProvider.getBlockNumber().then(console.log); // 12345
 ```
 
+### erc20
+Instance of [ERC-20](/sdk/erc-20) helper.
+
+
+### erc721
+Instance of [ERC-721](/sdk/erc-721) helper.
+
+
 ## Methods
 ### getBalance
 method to get balance of the wallet in ether unit format

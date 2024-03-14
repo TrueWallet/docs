@@ -68,3 +68,15 @@ sidebar_label: Data interfaces
 
 ### TrueWalletModules
 type TrueWalletModules = 'SecurityControlModule' | 'SocialRecoveryModule';
+
+### SendErc20Params
+
+### ApproveErc20Params
+
+### ApproveErc721Params
+
+### ApproveAllErc721Params
+
+### TransferErc721Params
+
+### SafeTransferErc721Params
