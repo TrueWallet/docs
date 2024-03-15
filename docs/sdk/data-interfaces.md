@@ -73,32 +73,32 @@ type TrueWalletModules = 'SecurityControlModule' | 'SocialRecoveryModule';
 * **amount**: number | string | bigint - Amount of tokens to send
 * **to**: string - Receiver address
 * **from?**: string - Sender address
-* **tokenAddress**: string - Address of the ERC-20 token contract
+* **contractAddress**: string - Address of the ERC-20 token contract
 
 ### ApproveErc20Params
 * **spender**: string - Address of the account that is allowed to spend the tokens
 * **amount**: number | string | bigint - Amount of tokens to approve in wei
-* **tokenAddress**: string - Address of the ERC-20 token contract
+* **contractAddress**: string - Address of the ERC-20 token contract
 
 ### ApproveErc721Params
 * **to**: string - Address of the account that is allowed to spend the tokens
 * **tokenId**: number | string - ID of the NFT
-* **tokenAddress**: string - Address of the ERC-721 NFT token contract
+* **contractAddress**: string - Address of the ERC-721 NFT token contract
 
 ### ApproveAllErc721Params
 * **operator**: string - Address to be approved for the given NFT
 * **approved**: boolean - True if the operator is approved, false to revoke approval
-* **tokenAddress**: string - Address of the ERC-721 NFT token contract
+* **contractAddress**: string - Address of the ERC-721 NFT token contract
 
 ### TransferErc721Params
 * **from**: string - The current owner of the NFT
 * **to**: string - The new owner
 * **tokenId**: number | string - ID of the NFT
-* **tokenAddress**: string - Address of the ERC-721 NFT token contract
+* **contractAddress**: string - Address of the ERC-721 NFT token contract
 
 ### SafeTransferErc721Params
 * **from**: string - The current owner of the NFT
 * **to**: string - The new owner
 * **tokenId**: number | string - ID of the NFT
-* **tokenAddress**: string - Address of the ERC-721 NFT token contract
+* **contractAddress**: string - Address of the ERC-721 NFT token contract
 * **data?**: string - Additional data with no specified format
