@@ -102,3 +102,24 @@ type TrueWalletModules = 'SecurityControlModule' | 'SocialRecoveryModule';
 * **tokenId**: number | string - ID of the NFT
 * **contractAddress**: string - Address of the ERC-721 NFT token contract
 * **data?**: string - Additional data with no specified format
+
+### TransferErc1155Params
+* **contractAddress**: string - Address of the ERC-1155 NFT token contract
+* **from**: string - The current owner of the NFT
+* **to**: string - The new owner
+* **id**: number - ID of the NFT
+* **value**: number - Amount of tokens to transfer
+* **data?**: string - Additional data with no specified format
+
+### BatchTransferErc1155Params
+* **contractAddress**: string - Address of the ERC-1155 NFT token contract
+* **from**: string - The current owner of the NFT
+* **to**: string - The new owner
+* **ids**: number[] - Array of NFT IDs
+* **values**: number[] - Array of amounts of tokens to transfer
+* **data?**: string - Additional data with no specified format
+
+### SetApprovalForAllErc1155Params
+* **contractAddress**: string - Address of the ERC-1155 NFT token contract
+* **operator**: string - Address to be approved for the given NFT
+* **approved**: boolean - True if the operator is approved, false to revoke approval

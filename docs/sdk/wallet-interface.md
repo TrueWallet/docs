@@ -40,6 +40,9 @@ Instance of [ERC-20](/sdk/erc-20) helper.
 ### erc721
 Instance of [ERC-721](/sdk/erc-721) helper.
 
+### erc1155
+Instance of [ERC-1155](/sdk/erc-1155) helper.
+
 
 ## Methods
 ### getBalance
