@@ -57,25 +57,6 @@ const wallet = await initTrueWallet({...});
 const balance = await wallet.getBalance(); // 123.45
 ```
 
-### getERC20Balance
-method to get balance in ethers format of the wallet for specified ERC20 token
-
-params:
-
-| Parameter    | Type   | Required | Value                             |
-|--------------|--------|-|-----------------------------------|
-| tokenAddress | string | True  | Address of the ERC20 token        |
-
-returns \{Promise\<string\>\}
-
-```javascript
-import {initTrueWallet} from '@truewallet/sdk';
-
-const wallet = await initTrueWallet({...});
-const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-const balance = await wallet.getERC20Balance(usdtAddress); // 123.45
-```
-
 ### getNonce
 method to get nonce of the wallet
 
@@ -109,32 +90,6 @@ import {initTrueWallet} from '@truewallet/sdk';
 
 const wallet = await initTrueWallet({...});
 const operationResponse = await wallet.send({to: '0x...', amount: 123.45});
-await operationResponse.wait(); // wait for the transaction to be mined
-```
-
-### sendErc20
-method to send ERC20 tokens to the specified address
-
-params:
-
-| Parameter    | Type       | Required | Value                             |
-|--------------|------------|-|-----------------------------------|
-| params       | SendErc20Params | True  | SendErc20Params object           |
-| paymaster    | string     | False | Address of the paymaster contract |
-
-*SendErc20Params:*
-* **to** - (string) Recipient address
-* **amount** - (string | number) Amount to send in ether unit format
-* **tokenAddress** - (string) Address of the ERC20 token
-
-returns \{Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresponse)\>\}
-
-```javascript
-import {initTrueWallet} from '@truewallet/sdk';
-
-const wallet = await initTrueWallet({...});
-const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
-const operationResponse = await wallet.sendErc20({to: '0x...', amount: 123.45, tokenAddress: usdtAddress});
 await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
