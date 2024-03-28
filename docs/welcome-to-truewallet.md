@@ -24,7 +24,7 @@ At TrueWallet, we are unwavering in our commitment to enhancing your CryptoWalle
 
 ### Wallet
 * Social recovery (coming soon)
-* NFT (ERC721 and ERC1155) (coming soon)
+* NFT ([ERC721](/sdk/erc-721) and [ERC1155](/sdk/erc-1155))
 * Session keys (coming soon)
 * Modules (coming soon)
 * Plugins (coming soon)
