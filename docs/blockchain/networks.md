@@ -8,4 +8,4 @@ List of blockchain networks supported by TrueWallet.
 * Polygon Mainnet
 
 ## Testnet
-* Polygon Mumbai
+* Polygon Amoy
