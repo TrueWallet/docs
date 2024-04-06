@@ -67,9 +67,7 @@ await operationResponse.wait(); // wait for the transaction to be mined
 import {initTrueWallet} from '@truewallet/sdk';
 const trueWallet = await initTrueWallet({...});
 
-const moduleAddress = await trueWallet.getModuleAddress('SocialRecoveryModule');
-const installedModules = await trueWallet.getInstalledModules();
-const isInstalled = installedModules.includes(moduleAddress);
+const isInstalled = trueWallet.isModuleInstalled('SocialRecoveryModule');
 console.log(isInstalled); // true
 ```
 
