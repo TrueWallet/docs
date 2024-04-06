@@ -33,6 +33,9 @@ console.log(wallet.ready); // true
 wallet.rpcProvider.getBlockNumber().then(console.log); // 12345
 ```
 
+### socialRecoveryModule 
+Instance of [SocialRecoveryModule](/sdk/modules/social-recovery) module.
+
 ### erc20
 Instance of [ERC-20](/sdk/erc-20) helper.
 
@@ -189,6 +192,24 @@ import {initTrueWallet} from '@truewallet/sdk';
 const wallet = await initTrueWallet({...});
 const address = await wallet.getModuleAddress('SocialRecoveryModule');
 console.log(address); // '0x...'
+```
+
+### isModuleInstalled
+method to check if the given module is installed in the wallet
+
+params:
+| Parameter | Type                  | Required | Value                            |
+|-----------|-----------------------|----------|----------------------------------|
+| module    | [TrueWalletModules](/sdk/data-interfaces#truewalletmodules) | True     | Module name                      |
+
+returns \{Promise\<boolean\>\}
+
+```javascript
+import {initTrueWallet} from '@truewallet/sdk';
+
+const wallet = await initTrueWallet({...});
+const isInstalled = await wallet.isModuleInstalled('SocialRecoveryModule');
+console.log(isInstalled); // true
 ```
 
 ### installModule

@@ -85,7 +85,7 @@ import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
 
-const guardians = await trueWallet.getGuardians();
+const guardians = await trueWallet.socialRecoveryModule.getGuardians();
 console.log(guardians); // ['0x...', '0x...', '0x...']
 ```
 
@@ -94,7 +94,7 @@ The `getGuardiansCount` method retrieves the number of guardians associated with
 returns: Promise\<bigint\>
 
 ```typescript
-const guardiansCount = await trueWallet.getGuardiansCount();
+const guardiansCount = await trueWallet.socialRecoveryModule.getGuardiansCount();
 console.log(guardiansCount); // 3n
 ```
 
@@ -112,7 +112,7 @@ returns: Promise\<boolean\>
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const isGuardian = await trueWallet.isGuardian('0x...');
+const isGuardian = await trueWallet.socialRecoveryModule.isGuardian('0x...');
 console.log(isGuardian); // false
 ```
 
@@ -124,7 +124,7 @@ returns: Promise\<bigint\>
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const nonce = await trueWallet.nonce();
+const nonce = await trueWallet.socialRecoveryModule.nonce();
 console.log(nonce); // 1n
 ```
 
@@ -137,7 +137,7 @@ returns: Promise\<bigint\>
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const threshold = await trueWallet.getThreshold();
+const threshold = await trueWallet.socialRecoveryModule.getThreshold();
 console.log(threshold); // 2n
 ```
 
@@ -155,7 +155,7 @@ returns: Promise\<bigint\>
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const approvals = await trueWallet.getRecoveryApprovals(['0x...', '0x...']);
+const approvals = await trueWallet.socialRecoveryModule.getRecoveryApprovals(['0x...', '0x...']);
 console.log(approvals); // 2n
 ```
 
@@ -176,7 +176,7 @@ returns: Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresp
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const operationResponse = await trueWallet.approveRecovery('0x...', ['0x...', '0x...'], 1640995200);
+const operationResponse = await trueWallet.socialRecoveryModule.approveRecovery('0x...', ['0x...', '0x...'], 1640995200);
 await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
@@ -196,7 +196,7 @@ returns: Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresp
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const operationResponse = await trueWallet.executeRecovery('0x...');
+const operationResponse = await trueWallet.socialRecoveryModule.executeRecovery('0x...');
 await operationResponse.wait(); // wait for the transaction to be mined
 ```
 
@@ -209,6 +209,6 @@ returns: Promise\<[UserOperationResponse](/sdk/data-interfaces#useroperationresp
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const operationResponse = await trueWallet.cancelRecovery();
+const operationResponse = await trueWallet.socialRecoveryModule.cancelRecovery();
 await operationResponse.wait(); // wait for the transaction to be mined
 ```
