@@ -76,6 +76,7 @@ The Social Recovery module provides the following methods:
 
 ### getGuardians
 The `getGuardians` method retrieves the list of guardians associated with the wallet.
+
 returns: Promise\<string[]\>
 
 ```typescript
@@ -89,6 +90,7 @@ console.log(guardians); // ['0x...', '0x...', '0x...']
 
 ### getGuardiansCount
 The `getGuardiansCount` method retrieves the number of guardians associated with the wallet.
+
 returns: Promise\<bigint\>
 
 ```typescript
@@ -145,6 +147,7 @@ The `getRecoveryApprovals` method retrieves the guardian approval count for this
 params:
 | Parameter | Type       | Required | Value                             |
 |-----------|------------|----------|-----------------------------------|
+| walletAddress  | string     | True     | The target wallet |
 | newOwners  | string[]     | True     | The new owners' addresses |
 
 returns: Promise\<bigint\>
@@ -153,10 +156,26 @@ returns: Promise\<bigint\>
 import {initTrueWallet} from '@truewallet/sdk';
 
 const trueWallet = await initTrueWallet({...});
-const approvals = await trueWallet.socialRecoveryModule.getRecoveryApprovals(['0x...', '0x...']);
+const approvals = await trueWallet.socialRecoveryModule.getRecoveryApprovals(trueWallet.address, ['0x...', '0x...']);
 console.log(approvals); // 2n
 ```
 
+### getRecoveryEntry
+The `getRecoveryEntry` retrieves the wallet's current ongoing recovery request.
+
+| Parameter | Type       | Required | Value                             |
+|-----------|------------|----------|-----------------------------------|
+| walletAddress  | string     | True     | The target wallet |
+
+returns: Promise\<[string[], bigint, bigint]>\> - The list of new owners, the time until which the recovery will be pending, and the nonce - unique nonce to ensure each recovery process is unique
+
+```typescript
+import {initTrueWallet} from '@truewallet/sdk';
+
+const trueWallet = await initTrueWallet({...});
+const recoveryEntry = await trueWallet.socialRecoveryModule.getRecoveryEntry(trueWallet.address);
+console.log(recoveryEntry); // [['0x...', '0x...'], 1640995200n, 2n]
+```
 
 ### approveRecovery 
 The `approveRecovery` method should be called by guardian to start recovery process
