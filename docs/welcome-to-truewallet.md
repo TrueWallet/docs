@@ -1,29 +1,34 @@
 ---
 sidebar_position: 1
 slug: /
-title: TrueWallet - Enhancing Your CryptoWallet Experience with Account Abstraction
-description: Explore TrueWallet's innovative proposal for enhancing your crypto experience with Account Abstraction (ERC-4337). Discover seamless smart contract interactions, enhanced DeFi access, NFT integration, and robust security measures.
-keywords: [TrueWallet, CryptoWallet, Account Abstraction, ERC-4337, smart contracts, DeFi, NFT integration, security measures, decentralized applications, DApps, non-custodial wallet]
+title: TrueWallet - Low-code Smart Accounts as a service provider
+description: Effortless integration of Smart Accounts for your project. Save time and money, by focusing on your primary business goals.
+keywords: [TrueWallet, Account Abstraction, ERC-4337, Smart Account, low-code integration, Smart Accounts integration, WaaS, wallet as a service]
 sidebar_label: Welcome to TrueWallet
 ---
 
 # Welcome to TrueWallet
-At TrueWallet, we are unwavering in our commitment to enhancing your CryptoWallet experience and providing cutting-edge solutions to meet your evolving needs. We are excited to introduce our proposal for an improved online service that focuses on the innovative concept of Account Abstraction (ERC-4337).
+TrueWallet is a platform that enables easy integration of Smart Accounts into your project. With TrueWallet, you can:
+* **Save time and money:** Eliminate the need to develop and maintain your own Smart Accounts infrastructure.
+* **Focus on your core business goals:** TrueWallet will take care of the secure and reliable operation of Smart Accounts, so you can focus on:
+  * developing your product, and
+  * achieving your business goals
+* **Ensure security:** TrueWallet uses the most advanced security methods to protect your assets
 
- Key Enhancements We Aim to Implement:
+Some use cases:
+* You want to eliminate private keys for your customers
+* You need to integrate NFT or crypto wallet with extra business logic
+* You are looking at how to pay transaction fees instead of your customers
+* You want to give the possibility to your customers to pay transaction fees in ERC-20 tokens
+* You want to attract Web3 customers to your Web2 project and vice versa
+* You want to develop or integrate a crypto wallet but don’t want to worry about smart contracts and infrastructure
+* And more ....
 
-1. Account Abstraction Integration: Our vision for an advanced online service involves the seamless integration of Account Abstraction. This technology allows users to interact with smart contracts and decentralized applications (DApps) directly from their crypto wallet, simplifying the user experience and broadening the utility of your digital assets.
-2. Streamlined Smart Contract Interaction: With Account Abstraction, we aim to eliminate the need for external accounts and complex gas management, enabling users to interact with smart contracts as effortlessly as sending a regular transaction.
-3. Enhanced DeFi and DApp Access: Account Abstraction opens the doors to an array of DeFi platforms and DApps. You'll be able to lend, borrow, swap, stake, and participate in other DeFi activities with unprecedented ease, directly from your crypto wallet.
-4. Security by Design: Account Abstraction will be implemented with robust security measures to ensure the safety of your digital assets and transactions. We're dedicated to providing a secure environment for your crypto interactions.
-5. Integration with NFTs: Account Abstraction will extend its utility to non-fungible tokens (NFTs), enabling users to mint, trade, and engage with NFTs directly through the crypto wallet.
-6. Community Collaboration: We envision building a thriving user community centered around Account Abstraction, where users can share knowledge, insights, and tips, contributing to a collective understanding of this cutting-edge technology.
-7. Custom Features and Individual Integrations: We provide tailored solutions that perfectly align with your unique business needs. By crafting these specific features and connections, you can optimize your systems to work together seamlessly and efficiently, enhancing productivity and addressing your organization's distinct requirements.
 
 ## Features
 
 ### Wallet
-* Social recovery (coming soon)
+* [Social recovery](/sdk/modules/social-recovery)
 * NFT ([ERC721](/sdk/erc-721) and [ERC1155](/sdk/erc-1155))
 * Session keys (coming soon)
 * Modules (coming soon)
@@ -64,4 +69,4 @@ We prefer the blockchain way, which brings us decentralization, transparency, op
 
 The project provides a centralized API service, but its main goal is to simplify some staff and it is optional to use.
 
-TrueWallet is a non-custodial wallet. It doesn't store any private keys and provides solutions to eliminate private key storing for other projects or their users where it can.
+TrueWallet is a non-custodial solution. It doesn't store any private keys and provides solutions to eliminate private key storing for other projects or their users where it can.
