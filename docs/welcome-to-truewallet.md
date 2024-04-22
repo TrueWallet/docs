@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
 slug: /
-title: TrueWallet - Low-code Smart Accounts as a service provider
-description: Effortless integration of Smart Accounts for your project. Save time and money, by focusing on your primary business goals.
+title: TrueWallet - Low-code Account Abstraction as a service provider
+description: Effortless integration of Account Abstraction for your project. Save time and money, by focusing on your primary business goals.
 keywords: [TrueWallet, Account Abstraction, ERC-4337, Smart Account, low-code integration, Smart Accounts integration, WaaS, wallet as a service]
 sidebar_label: Welcome to TrueWallet
 ---
 
 # Welcome to TrueWallet
-TrueWallet is a platform that enables easy integration of Smart Accounts into your project. With TrueWallet, you can:
+TrueWallet is a platform that enables easy integration of Account Abstraction into your project. With TrueWallet, you can:
 * **Save time and money:** Eliminate the need to develop and maintain your own Smart Accounts infrastructure.
 * **Focus on your core business goals:** TrueWallet will take care of the secure and reliable operation of Smart Accounts, so you can focus on:
   * developing your product, and
