@@ -32,7 +32,7 @@ Install the required packages for initializing the TrueWallet SDK.
 ## Integration Example
 Before initialisation your first wallet, create endpoint url in the [dashboard](https://dashboard.true-wallet.io).
 
-To check all available methods, please refer to the [authentication](/sdk/authentication).
+To check all available methods, please refer to the [initialization](/sdk/initialization).
 
 
 ### Initialisation with salt:

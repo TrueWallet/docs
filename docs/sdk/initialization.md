@@ -3,10 +3,10 @@ sidebar_position: 2
 title: TrueWallet SDK Authentication Method - Private Key, Metamask, and Salt
 description: Explore the available authentication methods for integrating TrueWallet SDK into your applications. Learn about Private Key usage, Metamask integration, and generating private keys from unique strings (Salt) while considering security implications.
 keywords: [TrueWallet SDK, authentication methods, Private Key, Metamask, Salt, EIP-1193, Brainwallet, security implications]
-sidebar_label: Authentication
+sidebar_label: Initialization
 ---
-# Authentication
-There are a couple available authentication methods that could be used during wallet initialization.
+# Initialization
+There are a couple available methods that could be used during wallet initialization.
 
 ## Private Key
 ```javascript

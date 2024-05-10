@@ -36,9 +36,9 @@ Some use cases:
 * ERC-6551 support (coming soon)
 
 ### Authentication
-* [Private key](/sdk/authentication#private-key)
+* [Private key](/sdk/initialization#private-key)
 * Oauth2 (coming soon)
-* [Metamask](/sdk/authentication#metamask)
+* [Metamask](/sdk/initialization#metamask)
 * Passkey (coming soon)
 * JWT (coming soon)
 

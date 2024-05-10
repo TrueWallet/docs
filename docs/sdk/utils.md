@@ -90,3 +90,28 @@ console.log(weiValue); // 1000000000000000000n
 const weiValue2 = toWei('1.0', 6);
 console.log(weiValue2); // 1000000n
 ```
+
+## encodeFunctionData
+
+Utility function to encode function data (calldata) that will be used in the transaction
+
+params:
+| Parameter | Type               | Required | Value                               |
+|-----------|--------------------|----------|-------------------------------------|
+| scAbi |  <a href="https://docs.ethers.org/v6/api/abi/#InterfaceAbi" target="_blank" rel="nofollow noopener noreferrer">InterfaceAbi</a> | True | ABI of the smart contract |
+| functionName | string | True | Name of the function |
+| params | any[] | True | Parameters of the function |
+
+returns \{string\}
+
+```typescript
+import { encodeFunctionData } from '@truewallet/sdk';
+
+const usdtAddress = '0xc2132D05D31c914a87C6611C10748AEb04B58e8F';
+const usdtAbi = ['function approve(address spender, uint256 amount)'];
+const params = ['0x...', 1000];
+
+const data = encodeFunctionData(usdtAbi, 'approve', params);
+
+console.log(data); // 0x095ea7b300...
+```
