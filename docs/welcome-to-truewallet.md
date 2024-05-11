@@ -35,7 +35,7 @@ Some use cases:
 * Plugins (coming soon)
 * ERC-6551 support (coming soon)
 
-### Authentication
+### Initialization
 * [Private key](/sdk/initialization#private-key)
 * Oauth2 (coming soon)
 * [Metamask](/sdk/initialization#metamask)
