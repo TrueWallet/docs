@@ -16,34 +16,74 @@ List of blockchain networks supported by TrueWallet.
 
 ### Mainnet
 * Ethereum
-* Binance Smart Chain
+* Arbitrum One
+* Arbitrum Nova
+* OP Mainnet
+* Base
+* Zora
 * Polygon
 * Polygon zkEVM
-* Fantom
-* Optimism
-* Arbitrum
-* Moonriver
-* Moonbeam
-* Cronos
-* Bittorent
+* Avalanche
 * Gnosis
-* Celo
-* Linea
-* Base
 * Scroll
-* OpBNB
+* Celo
+* Linea Mainnet
+* Blast
+* Mantle
+* Mode Mainnet
+* BNB Smart Chain
+* Fantom
+* Moonbeam
+* Moonriver
+* Flare Mainnet
+* Manta Pacific Mainnet
+* Boba Network
+* Astar zkEVM
+* Klaytn
+* Degen
+* Cronos Mainnet
+* opBNB
 * Kroma
+* DFK Chain
+* Fraxtal
+* Fuse
+* ZetaChain
+* Beam
+* Metis
+* PGN
+* Cyber
 
 ### Testnet
-* Polygon Amoy
-* Polygon zkEVM Testnet
-* Arbitrum Nova
 * Sepolia
+* Holesky
+* Arbitrum Sepolia
+* OP Sepolia
+* Base Sepolia
+* Zora Sepolia
+* Polygon Amoy
+* Polygon zkEVM Cardona
+* Avalanche Fuji
+* Gnosis Chiado
+* Scroll Sepolia
+* Alfajores
+* Linea Sepolia Testnet
+* Blast Sepolia
+* Mantle Sepolia Testnet
+* Mode Testnet
 * Binance Smart Chain Testnet
 * Fantom Testnet
-* Optimism Goerli
-* Avalanche Testnet
-* Moonbeam Testnet
-* Celo Alfajores
-* Base Testnet
-* Linea Testnet
+* Moonbase Alpha
+* Coston2
+* Taiko Hekla L2
+* Immutable zkEVM Testnet
+* Klaytn Baobab Testnet
+* Aurora Testnet
+* opBNB Testnet
+* Kroma Sepolia
+* Fuse Sparknet
+* ZetaChain Athens Testnet
+* Beam Testnet
+* Hedera Testnet
+* IoTeX Testnet
+* PGN Sepolia
+* Cyber Testnet
