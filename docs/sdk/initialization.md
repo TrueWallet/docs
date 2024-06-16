@@ -8,6 +8,28 @@ sidebar_label: Initialization
 # Initialization
 There are a couple available methods that could be used during wallet initialization.
 
+## JWT
+```javascript
+import {initTrueWallet} from '@truewallet/sdk';
+/**
+ * This is an example function to get JWT token from your API
+ * It should return a string with JWT token
+ * @returns {Promise<string>}
+ * */
+const getJwt = async() => {
+  const { token } = await fetch('API_URL').then(res => res.json());
+  return token;
+};
+
+const trueWallet = await initTrueWallet({
+  signer: {
+    type: 'jwt',
+    data: [getJwt]
+  },
+  bundlerUrl: '{{ENDPOINT_URL_FROM_DASHBOARD}}',
+});
+```
+
 ## Private Key
 ```javascript
 import {initTrueWallet} from '@truewallet/sdk';
