@@ -5,7 +5,7 @@ sidebar_label: Errors
 ---
 
 # SDK Errors
-Errors in SDK contains string code.
+Errors in SDK contain string code.
 
 ## Error Handling
 ```typescript
@@ -14,12 +14,12 @@ import { TWConfigError, TWErrorCodes } from '@truewallet/sdk';
 try {
   // some code
 } catch (error) {
-  // Variant 1
+  // Option 1
   if (error instanceof TWConfigError) {
     handleConfigError(error);
   }
   
-  // Variant 2
+  // Option 2
   if (error.code === TWErrorCodes.CONFIG_ERROR) {
     handleConfigError(error);
   }
@@ -29,6 +29,7 @@ try {
 ## Errors
 ### TWConfigError
 Thrown if sdk init config is not correct
+
 code: TWErrorCodes.CONFIG_ERROR
 
 ### TWUnsupportedModuleError
@@ -48,6 +49,7 @@ code: TWErrorCodes.MODULE_ALREADY_INSTALLED
 
 ### TWOwnerCallError
 Thrown if you try to call owner method without owning wallet
+
 code: TWErrorCodes.WALLET_NOT_OWNED
 
 ### TWWalletNotReadyError
