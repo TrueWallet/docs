@@ -1,5 +1,9 @@
 ---
 sidebar_position: 6
+title: TrueWallet Encrypted Private Key Storage
+description: Discover how our advanced private key storage solution ensures the highest security for your crypto wallets using AWS Key Management Service (KMS) and Nitro Enclaves. Learn about our secure vault, isolated environments, and the benefits of custodial and centralized solutions.
+keywords: [private key storage, crypto wallet security, AWS KMS, Nitro Enclaves, secure vault, isolated environment, custodial solution, centralized crypto storage, blockchain security, secure crypto transactions]
+sidebar_label: Private Key Storage
 ---
 # Private Key Storage
 
@@ -37,4 +41,4 @@ And again - yes. Solutions based on AWS KMS or MPC are centralized. Of course, y
 
 ## Why should I use it?
 
-When from the definition it is called custodial, but no one has access to it. TrueWallet provides Account Abstraction, which means that you always have [Social Recovery](/sdk/modules/social-recovery) and you can restore access to the wallet or change the wallet owner anytime.
+When from the definition it is called custodial, but no one has access to it. TrueWallet provides Account Abstraction, which means that you always have [Social Recovery](/sdk/modules/social-recovery) and you can restore access to the wallet or change the wallet owner anytime. No it's time to [start use it](/sdk/initialization#jwt)

@@ -2,13 +2,24 @@
 sidebar_position: 2
 title: TrueWallet SDK Authentication Method - Private Key, Metamask, and Salt
 description: Explore the available authentication methods for integrating TrueWallet SDK into your applications. Learn about Private Key usage, Metamask integration, and generating private keys from unique strings (Salt) while considering security implications.
-keywords: [TrueWallet SDK, authentication methods, Private Key, Metamask, Salt, EIP-1193, Brainwallet, security implications]
+keywords: [TrueWallet SDK, authentication methods, Private Key, Metamask, Salt, EIP-1193, security implications, JWT wallet]
 sidebar_label: Initialization
 ---
 # Initialization
 There are a couple available methods that could be used during wallet initialization.
 
 ## JWT
+
+Please make sure that your JWT meets the minimum requirements. It must contain `alg` in the header, `iss`, `sub`, `aud`, `iat`, and `exp` in the payload. Otherwise, a token will be rejected. For the user ID you can add a custom payload, for example `user_id`. All details with explanations can be found in <a href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="nofollow noopener noreferrer">RFC-7519</a>.
+
+Please make sure that your JWKS contain `kty`, `kid`, `use`, `alg`, `n`, and `e` and JWKS Endpoint is public for everyone. All details with explanations can be found in <a href="https://datatracker.ietf.org/doc/html/rfc7517" target="_blank" rel="nofollow noopener noreferrer">RFC-7517</a>.
+
+Visit the [dashboard](https://dashboard.true-wallet.io), and create a new project (or modify the existing one). In the section Project settings (JWT authentication) add JWKS Endpoint and User Claim, which represents a unique user ID in your system (in our example above it is `user_id`).
+
+The private key will be generated for each user and stored in the [encrypted private key storage](/private-key-storage).
+
+*Pay attention. After setting up JWT authentication in the TrueWallet dashboard, it is highly not recommended to change your JWT payload, because it takes part in private key generation.*
+
 ```javascript
 import {initTrueWallet} from '@truewallet/sdk';
 /**
