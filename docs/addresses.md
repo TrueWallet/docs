@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: TrueWallet Smart Contract Addresses - EntryPoint, Smart Account, Modules
 description: Discover the addresses of key smart contracts within the TrueWallet ecosystem, including the EntryPoint, TrueWallet Smart Account, and associated modules. Access the necessary contract addresses for seamless integration and interaction with TrueWallet's decentralized services.
 keywords: [TrueWallet, smart contract addresses, EntryPoint, Smart Account, modules, decentralized services, integration]
