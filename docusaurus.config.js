@@ -99,6 +99,22 @@ const config = {
                 label: 'SDK',
                 to: '/category/sdk',
               },
+              {
+                label: 'Smart Account',
+                to: '/smart-account',
+              },
+              {
+                label: 'Bundler',
+                to: '/category/bundler',
+              },
+              {
+                label: 'Blockchain',
+                to: '/category/blockchain',
+              },
+              {
+                label: 'Private Key Storage',
+                to: '/private-key-storage',
+              },
             ],
           },
           {
@@ -111,6 +127,10 @@ const config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/truewallet4337',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://linkedin.com/company/truewallet/',
               },
             ],
           },
