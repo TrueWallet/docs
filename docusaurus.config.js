@@ -50,6 +50,18 @@ const config = {
         pages: false,
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            id: 'truewallet-openapi',
+            spec: 'openapi/api.json',
+            route: '/api/',
+          },
+        ],
+      }
+    ],
   ],
 
   scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.true-wallet.io'}],
@@ -76,6 +88,11 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            label: 'API',
+            to: '/api',
+            position: 'left',
           },
           {
             href: 'https://dashboard.true-wallet.io',

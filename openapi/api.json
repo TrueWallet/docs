@@ -1,0 +1,207 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "True wallet API",
+    "version": "",
+    "description": "TrueWallet API endpoints"
+  },
+  "paths": {
+    "/v1/{api_key}/wallets/get-address": {
+      "post": {
+        "summary": "Get Address",
+        "description": "Get wallet address from the given jwt token. Used in <a href='https://docs.true-wallet.io/sdk/initialization#jwt' target='_blank'>JWT</a> initialization. ",
+        "operationId": "get_address_v1__api_key__wallets_get_address_post",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Api Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAddressSerializer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/{api_key}/wallets/sign": {
+      "post": {
+        "summary": "Sign",
+        "description": "Sign a message or hash using the wallet. Used in <a href='https://docs.true-wallet.io/sdk/initialization#jwt' target='_blank'>JWT</a> initialization.",
+        "operationId": "sign_v1__api_key__wallets_sign_post",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Api Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignSerializer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetAddressSerializer": {
+        "properties": {
+          "jwt_token": {
+            "type": "string",
+            "title": "Jwt Token"
+          }
+        },
+        "type": "object",
+        "required": [
+          "jwt_token"
+        ],
+        "title": "GetAddressSerializer"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "SignSerializer": {
+        "properties": {
+          "jwt_token": {
+            "type": "string",
+            "title": "Jwt Token"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "message_type": {
+            "type": "string",
+            "enum": [
+              "message",
+              "hash"
+            ],
+            "title": "Message Type"
+          },
+          "wallet_type": {
+            "type": "string",
+            "enum": [
+              "evm"
+            ],
+            "const": "evm",
+            "title": "Wallet Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "jwt_token",
+          "message",
+          "message_type",
+          "wallet_type"
+        ],
+        "title": "SignSerializer"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
